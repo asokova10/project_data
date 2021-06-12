@@ -12,7 +12,7 @@ folium
 geopandas
 plotly
 pycountry
-
+statsmodels
 
 streamlit_folium
 requests
