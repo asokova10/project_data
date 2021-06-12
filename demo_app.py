@@ -24,8 +24,8 @@ from bs4 import BeautifulSoup
 import networkx as nx
 with st.echo(code_location='below'):
     def main():
-        df = pd.read_csv('~/Desktop/world-happiness-report.csv')
-        df_2021 = pd.read_csv('~/Desktop/world-happiness-report-2021.csv')
+        df = pd.read_csv('./world-happiness-report.csv')
+        df_2021 = pd.read_csv('./world-happiness-report-2021.csv')
         p = st.sidebar.selectbox("Выберите страничку", ["Описание проекта", "Изучение данных", "Изучение данных. Медленная таблица" ,"Планируем переезд",
                                                            "Немножко ML", "Победитель конкурса 'Лучшая страна'"])
 
@@ -44,8 +44,8 @@ with st.echo(code_location='below'):
             st.markdown("Изучим наши данные!")
             st.markdown("Сперва предлагаю вам посмотреть на распределение Ladder score по странам на карте")
             st.markdown("Для построения этой карты добавим новый столбец ISO в датафрейм")
-            df_2021 = pd.read_csv('~/Desktop/world-happiness-report-2021.csv')
-            df = pd.read_csv('~/Desktop/world-happiness-report.csv')
+            df_2021 = pd.read_csv('./world-happiness-report-2021.csv')
+            df = pd.read_csv('./world-happiness-report.csv')
 
 
             def get_iso(c_name):
@@ -188,15 +188,15 @@ with st.echo(code_location='below'):
             st.markdown("Теперь применим R:")
             st.markdown("Первая таблица сделана с использованием gglot2, а также его расширением ggcharts, для ранжирования стран была использована библиотека tidyverse")
 
-            image = Image.open('~/Desktop/R_pic_1.png')
+            image = Image.open('./R_pic_1.png')
             st.image(image)
             st.markdown("Для второй таблицы сперва получим зависимость Ladder score от ВВП, потом наложим маску, которая разделит все страны на 4 группы относительно России. Воспользуемся расширением ggrepel")
-            image = Image.open('~/Desktop/R_pic_2.png')
+            image = Image.open('./R_pic_2.png')
             st.image(image)
             st.markdown("Посмотрим, что происходит по годам")
             st.markdown("Время для Julia!")
             st.markdown("Для этого с помощью Julia сначала сгруппируем наш датафрейм по годам, потом посчитаем среднее, потом нарисует scatter plot")
-            image = Image.open('~/Desktop/Julia_pic_1.png')
+            image = Image.open('./Julia_pic_1.png')
             st.image(image)
             st.markdown("Из курса макроэкономики, мы, впрочем, уже могли ожидать получившиеся волны! (ну это похоже на волны...)")
 
@@ -205,8 +205,8 @@ with st.echo(code_location='below'):
             st.markdown("Она такая медленная, потому что для 150 стран сначала нужно запросить информацию по координатам и т.п.")
             st.markdown("На карте вы можете увидеть Ladder score 2021 по странам при наведении зума (надо кликнуть по метке). В большом масштабе метки объединяются по областям и принимают соответствующий цвет: зеленый - хорошо, красный - плохо (но с поправкой на кол-во стран в метке) ")
             st.markdown("Сделано с применением folium")
-            df_2021 = pd.read_csv('~/Desktop/world-happiness-report-2021.csv')
-            df = pd.read_csv('~/Desktop/world-happiness-report.csv')
+            df_2021 = pd.read_csv('./world-happiness-report-2021.csv')
+            df = pd.read_csv('./world-happiness-report.csv')
             geolocator = Nominatim(user_agent="<masked>")
             df_2021 = df_2021.dropna()
 
