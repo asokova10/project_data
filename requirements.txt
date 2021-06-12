@@ -4,7 +4,7 @@ streamlit==0.79.0
 altair 
 pandas
 seaborn
-sklearn.linear_model
+
 plotly
 geopy.geocoders
 folium
@@ -12,8 +12,7 @@ folium.plugins
 geopandas
 plotly.express
 pycountry
-sklearn.pipeline
-sklearn.preprocessing
+
 plotly.subplots
 streamlit_folium
 requests
@@ -24,3 +23,6 @@ bs4
 networkx
 folium.plugins
 plotly.graph_objs
+
+scikit_learn==0.24.2
+
