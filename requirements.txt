@@ -18,7 +18,7 @@ streamlit_folium
 requests
 scipy
 
-PIL
+Pillow
 bs4
 networkx
 
