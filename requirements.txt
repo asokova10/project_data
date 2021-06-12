@@ -6,14 +6,14 @@ pandas
 seaborn
 
 plotly
-geopy.geocoders
+geopy
 folium
-folium.plugins
+
 geopandas
-plotly.express
+plotly
 pycountry
 
-plotly.subplots
+
 streamlit_folium
 requests
 scipy
@@ -21,8 +21,8 @@ sqlite3
 PIL
 bs4
 networkx
-folium.plugins
-plotly.graph_objs
+
+
 
 scikit_learn==0.24.2
 
