@@ -17,7 +17,7 @@ pycountry
 streamlit_folium
 requests
 scipy
-sqlite3
+
 PIL
 bs4
 networkx
